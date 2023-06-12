@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 *,
 *::before,
 *::after {
@@ -12,6 +13,14 @@
 
 body {
   min-height: 100vh;
+  background-image: url("../assets/images/Background.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
 }
 
 img,
@@ -24,7 +33,99 @@ video {
 
 :root {
   --primary-color: rgba(1, 50, 67, 1);
-  --white-color:rgba(255,255,255,1);
-  --fade-white-color:rgba(255,255,255,0.6);
-  --black-color : :rgba(0,0,0,1);
+  --white-color: rgba(255, 255, 255, 1);
+  --fade-white-color: #bcbcbc;
+  --black-color: #000000;
+  --font-family: "Roboto", sans-serif;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 900px;
+}
+.img-container {
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border-radius: 10px 0 0 10px;
+  position: relative;
+  min-height: 560px;
+}
+.text-container {
+  position: absolute;
+  top: 50px;
+}
+.text-container h1 {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.text-container p{
+  font-size: 18px;
+  color:#86BFD3;
+}
+.info-container {
+  min-height: 560px;
+  background-color: var(--white-color);
+  padding: 2.5rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  border-radius: 0 10px 10px 0;
+}
+.info-container h1 {
+  font-weight: 700;
+  font-size: 42px;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+.input-container label {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 10px 0;
+}
+.input-container input::placeholder {
+  color: var(--fade-white-color);
+}
+.input-container input {
+  font-size: 18px;
+  border-radius: 5px;
+  border: 1px solid var(--fade-white-color);
+  color: var(--fade-white-color);
+  padding: 20px 13px;
+  margin-bottom:10px;
+}
+.info-container a {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+.terms-container {
+  display: flex;
+  gap: 10px;
+  align-items: start;
+  font-size: 18px;
+  max-width: 250px;
+}
+.terms-container a {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+.terms-container input[type="checkbox"]{
+  width: 40px;
+  height: 40px;
+}
+.info-container button{
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  border: none;
+  letter-spacing: 2px;
+  font-weight: 700;
+  padding: 20px 0;
+  border-radius: 5px;
 }
