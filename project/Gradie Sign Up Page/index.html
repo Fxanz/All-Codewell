@@ -17,20 +17,20 @@
         </div>
         <img src="./src/assets/images/iPhone Mockup.png" alt="iphone mockup img" />
       </div>
-      <div class="info-container">
+      <form class="info-container">
         <h1>Login</h1>
         <div class="input-container">
           <label for="email">Email</label>
-          <input type="email" name="email" id="email" placeholder="john@example.com"/>
+          <input type="email" name="email" id="email" placeholder="john@example.com" required/>
           <label for="password">Password</label>
-          <input type="password" name="password" id="password" placeholder="At least 8 characters"/>
+          <input type="password" name="password" id="password" placeholder="At least 8 characters" required/>
         </div>
         <div class="terms-container">
           <input type="checkbox"> 
           <p>By creating an account, you agree to the <a href="#">Terms & Conditions.</a></p>
         </div>
-        <button>Create an Account</button>
-      </div>
+        <button type="submit">Create an Account</button>
+      </form>
     </main>
     <script src="./src/js/index.js"></script>
   </body>
