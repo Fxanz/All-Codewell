@@ -22,7 +22,9 @@ video {
   max-width: 100%;
 }
 
-:root{
-  --bg-color : #000;
-  --text-color : #fff;
+:root {
+  --primary-color: rgba(1, 50, 67, 1);
+  --white-color:rgba(255,255,255,1);
+  --fade-white-color:rgba(255,255,255,0.6);
+  --black-color : :rgba(0,0,0,1);
 }
