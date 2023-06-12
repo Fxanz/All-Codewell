@@ -10,21 +10,12 @@
   text-decoration: none;
   outline: none;
 }
-
 body {
-  min-height: 100vh;
   background-image: url("../assets/images/Background.png");
   background-size: cover;
-  background-position: center center;
   background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--font-family);
-  margin: 0 20px;
-  overflow-x: hidden;
+  background-position: center center;
 }
-
 img,
 picture,
 svg,
@@ -38,124 +29,138 @@ video {
   --white-color: rgba(255, 255, 255, 1);
   --fade-white-color: #bcbcbc;
   --black-color: #000000;
+
   --font-family: "Roboto", sans-serif;
 }
 
+/* Start here */
 main {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family);
 }
 .img-container {
-  display: flex;
-  justify-content: center;
-  background-color: var(--primary-color);
   color: var(--white-color);
-  border-radius: 10px 0 0 10px;
-  position: relative;
-  min-height: 560px;
+  background-color: var(--primary-color);
+  flex: 1;
 }
 .text-container {
-  position: absolute;
-  top: 50px;
+  text-align: center;
+  margin: 50px 0 -50px 0;
 }
 .text-container h1 {
-  text-align: center;
-  font-size: 42px;
   font-weight: 700;
+  font-size: 25px;
   margin-bottom: 10px;
 }
 .text-container p {
+  font-weight: 400;
   font-size: 18px;
   color: #86bfd3;
 }
 .info-container {
-  min-height: 560px;
   background-color: var(--white-color);
-  padding: 2.5rem 4rem;
+  flex: 1;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 20px;
-  border-radius: 0 10px 10px 0;
 }
+
 .info-container h1 {
+  font-size: 25px;
   font-weight: 700;
-  font-size: 42px;
+}
+.info-container button {
+  border: none;
+  border-radius: 5px;
+  padding: 15px 0;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background-color: var(--primary-color);
+  color: var(--white-color);
 }
 .input-container {
   display: flex;
   flex-direction: column;
 }
 .input-container label {
-  font-size: 20px;
   font-weight: 700;
-  margin: 10px 0;
+  margin: 5px 0;
+}
+.input-container input {
+  padding: 15px;
+  border: 1px solid var(--fade-white-color);
+  color: var(--black-color);
 }
 .input-container input::placeholder {
   color: var(--fade-white-color);
-}
-.input-container input {
-  font-size: 18px;
-  border-radius: 5px;
-  border: 1px solid var(--fade-white-color);
-  color: var(--black-color);
-  padding: 20px 13px;
-  margin-bottom: 10px;
-}
-.info-container a {
-  color: var(--primary-color);
-  text-decoration: underline;
 }
 .terms-container {
   display: flex;
   gap: 10px;
   align-items: start;
-  font-size: 18px;
-  max-width: 250px;
 }
-.terms-container a {
+.terms-container input {
+  width: 30px;
+  height: 30px;
+}
+.terms-container p {
+  font-size: 20px;
+}
+.terms-container p > a {
+  text-decoration: underline;
   color: var(--primary-color);
   font-weight: 700;
 }
-.terms-container input[type="checkbox"] {
-  width: 40px;
-  height: 40px;
-}
-.info-container button {
-  color: var(--white-color);
-  background-color: var(--primary-color);
-  border: none;
-  letter-spacing: 2px;
-  font-weight: 700;
-  padding: 20px 0;
-  border-radius: 5px;
-  cursor: pointer;
-}
-@media (max-width: 800px) {
+
+@media (min-width: 425px) {
   body {
-    margin: 20px;
+    margin: 20px 50px;
+  }
+  .img-container {
+    border-radius: 10px 10px 0 0;
   }
   .text-container {
-    top: 80px;
+    margin: 80px 0 -80px 0;
   }
-  main {
-    grid-template-columns: repeat(1, 2fr);
+  .text-container h1 {
+    font-size: 32px;
   }
-  .img-container{
-    border-radius: 10px 10px 0 0;
-    max-width: 600px;
+  .text-container p {
+    font-size: 20px;
   }
-  .info-container{
-    max-width: 600px;
+  .info-container {
     border-radius: 0 0 10px 10px;
   }
-}
-@media (max-width: 450px) {
-  body{
-    margin: 0;
+  .info-container h1 {
+    font-size: 32px;
   }
-  .img-container,.info-container{
-    border-radius: 0;
+}
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0 20px;
+  }
+  main {
+    max-width: 800px;
+    flex-direction: row;
+  }
+  .text-container {
+    margin: 50px 0 -50px 0;
+  }
+  .img-container {
+    border-radius: 10px 0 0 10px;
+  }
+  .info-container {
+    justify-content: space-between;
+    border-radius: 0 10px 10px 0;
+  }
+  .input-container label {
+    font-weight: 700;
+    margin: 15px 0;
   }
 }
